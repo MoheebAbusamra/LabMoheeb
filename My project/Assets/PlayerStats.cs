@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
+    public TextMeshProUGUI scoreUI;
     public int health = 3;
     public int lives = 3;
 
@@ -40,6 +42,7 @@ public class PlayerStats : MonoBehaviour
                 sr.enabled = true;
             }
         }
+        scoreUI.text=" " + score;
     }
 
     public void SpriteFlicker()
